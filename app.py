@@ -1,2 +1,1 @@
-name = 'shayan'
-def add(x: int, y: int): return x + y
+print("Testing 123")
