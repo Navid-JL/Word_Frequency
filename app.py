@@ -1,3 +1,5 @@
+import pandas
+
 print("Welcome to Word Frequency Counter")
 
 txt = '''Today is a beautiful day. The sun is shining brightly, and the sky is clear. I decided to take a walk in the park to enjoy the fresh air and nature's beauty. As I strolled along the path, I saw children playing and laughing, while their parents sat on benches chatting.
@@ -16,7 +18,7 @@ words = txt.split()
 frequency = {}
 
 for word in words:
-    cleaned = words.strip(".?!,:;").lower()
+    cleaned = word.strip(".?!,:;").lower()
     # striping symbols and making lower case
 
     frequency[cleaned] = frequency.get(cleaned, 0) + 1
