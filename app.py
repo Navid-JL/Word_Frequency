@@ -27,8 +27,6 @@ frequency_df = pandas.DataFrame(
     frequency.items(), columns=['Word', 'Frequency'])
 
 sorted_df = frequency_df.sort_values(by='Frequency', ascending=False)
-sorted_df = sorted_df.reset_index(drop=True)
-# reseting the index
 
 # print(sorted_df)
 
@@ -38,8 +36,8 @@ if __name__ == "__main__":
     # call your string processor function here
     # Output the results in a table
     sorted_df.plot(x='Word', y='Frequency', kind='bar')
-    plt.xlabel('Frequency')
-    plt.ylabel('Words')
+    plt.xlabel('Words')
+    plt.ylabel('Frequency')
     plt.title('Word Frequency Bar Chart')
     plt.show()
     # visualization using bar chart
