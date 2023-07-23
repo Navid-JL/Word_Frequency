@@ -40,3 +40,8 @@ def get_input() -> str:
     if len(txt.strip()) == 0:
         raise ValueError("Empty value is not allowed")
     return txt
+
+
+def output_error(error: str):
+    console.print(Align.center(
+        f"[danger][bold]{error}[/bold][/danger]\n"))
