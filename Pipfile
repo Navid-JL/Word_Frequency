@@ -6,6 +6,8 @@ name = "pypi"
 [packages]
 inquirer = "*"
 rich = "*"
+pandas = "*"
+matplotlib = "*"
 
 [dev-packages]
 
