@@ -8,8 +8,8 @@ import sys
 if __name__ == "__main__":
     sys.path.append('../')
     show_info()
+    txt: str
     while True:
-        txt: str
         try:
             chosen_command = prompt_user().get('input')
             if chosen_command == MANUALLY:
@@ -19,16 +19,16 @@ if __name__ == "__main__":
                 txt = str(' '.join(txt))
             else:
                 exit(code=0)
+
+            sorted_df = count_words(txt)
+
+            # visualization using bar chart
+            sorted_df.plot(x='Word', y='Frequency', kind='bar')
+            plt.xlabel('Words')
+            plt.ylabel('Frequency')
+            plt.title('Word Frequency Bar Chart')
+            plt.show()
         except pandas.errors.EmptyDataError as e:
             output_error("Try copying the text again into your clipboard")
         except ValueError as e:
             output_error(str(e))
-
-        sorted_df = count_words(txt)
-
-        # visualization using bar chart
-        sorted_df.plot(x='Word', y='Frequency', kind='bar')
-        plt.xlabel('Words')
-        plt.ylabel('Frequency')
-        plt.title('Word Frequency Bar Chart')
-        plt.show()
