@@ -23,3 +23,7 @@ for word in words:
 
     frequency[cleaned] = frequency.get(cleaned, 0) + 1
     # "0" is a default value to be returned if the key is not present in the dictionary
+
+frequency_df = pandas.DataFrame(
+    frequency.items(), columns=['Word', 'Frequency'])
+print(frequency_df)
