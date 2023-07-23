@@ -7,6 +7,10 @@ name = "pypi"
 inquirer = "*"
 rich = "*"
 pandas = "*"
+<<<<<<< HEAD
+=======
+matplotlib = "*"
+>>>>>>> de6564b0674dfe5d744c44376ad62fb0e943ed9f
 
 [dev-packages]
 
