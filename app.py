@@ -1,7 +1,7 @@
 import pandas
 from cli.core import show_info, prompt_user
 import matplotlib.pyplot as plt
-print("Welcome to Word Frequency Counter")
+import sys
 
 txt = '''Today is a beautiful day. The sun is shining brightly, and the sky is clear. I decided to take a walk in the park to enjoy the fresh air and nature's beauty. As I strolled along the path, I saw children playing and laughing, while their parents sat on benches chatting.
 
@@ -31,6 +31,7 @@ sorted_df = frequency_df.sort_values(by='Frequency', ascending=False)
 # print(sorted_df)
 
 if __name__ == "__main__":
+    sys.path.append('../')
     show_info()
     prompt_user()
     # call your string processor function here
