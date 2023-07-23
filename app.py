@@ -1,6 +1,7 @@
 import pandas
+from cli.core import show_info, prompt_user
 
-print("Welcome to Word Frequency Counter")
+# print("Welcome to Word Frequency Counter")
 
 txt = '''Today is a beautiful day. The sun is shining brightly, and the sky is clear. I decided to take a walk in the park to enjoy the fresh air and nature's beauty. As I strolled along the path, I saw children playing and laughing, while their parents sat on benches chatting.
 
@@ -30,4 +31,10 @@ frequency_df = pandas.DataFrame(
 sorted_df = frequency_df.sort_values(by='Frequency', ascending=False)
 sorted_df = sorted_df.reset_index(drop=True)
 
-print(sorted_df)
+# print(sorted_df)
+
+if __name__ == "__main__":
+    show_info()
+    prompt_user()
+    # call your string processor function here
+    # Output the results in a table
