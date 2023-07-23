@@ -28,6 +28,6 @@ frequency_df = pandas.DataFrame(
     frequency.items(), columns=['Word', 'Frequency'])
 
 sorted_df = frequency_df.sort_values(by='Frequency', ascending=False)
-
+sorted_df = sorted_df.reset_index(drop=True)
 
 print(sorted_df)
