@@ -26,4 +26,8 @@ for word in words:
 
 frequency_df = pandas.DataFrame(
     frequency.items(), columns=['Word', 'Frequency'])
-print(frequency_df)
+
+sorted_df = frequency_df.sort_values(by='Frequency', ascending=False)
+
+
+print(sorted_df)
