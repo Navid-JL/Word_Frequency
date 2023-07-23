@@ -15,3 +15,20 @@ def show_info() -> None:
         f"[bold yellow]{APP_NAME}[/] - [info]{YEAR}[/info][info] - [bold]V[/bold]{VERSION}[/info]\n"))
     console.print(Align.center(
         f"[info][bold]{APP_DESCRIPTION}[/bold][/info]\n"))
+
+
+def prompt_user() -> dict[str, str]:
+    """Prompt the user with a set of choices
+
+    Returns:
+        dict[str, str]: {'input': 'Enter manually'}
+    """
+    questions = [
+        List(
+            "input",
+            message="",
+            choices=["Enter manually", "Copy from clipboard", "Exit"],
+        ),
+    ]
+    answer: dict[str, str] = prompt(questions)
+    return answer
