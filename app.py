@@ -27,9 +27,11 @@ frequency_df = pandas.DataFrame(
 
 sorted_df = frequency_df.sort_values(by='Frequency', ascending=False)
 sorted_df = sorted_df.reset_index(drop=True)
+# reseting the index
 
 sorted_df.plot(x='Word', y='Frequency', kind='bar')
 plt.xlabel('Frequency')
 plt.ylabel('Words')
-plt.title('Word Frequency Horizontal Bar Chart')
+plt.title('Word Frequency Bar Chart')
 plt.show()
+# visualization using bar chart
