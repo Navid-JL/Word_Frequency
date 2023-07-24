@@ -4,6 +4,7 @@ Word Frequency app counts the frequency of words in a block of text and creates 
 
 ### Todo
 
+- [ ] Add ASCII art to the beginning of the project.
 
 ### In Progress
 
